@@ -4,8 +4,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class persona {
-    int opc;
-    String usuario, contrasena;
+    String usuario, contrasena, opc;
 
     public persona(String usuario, String contrasena) {
         this.usuario = usuario;
@@ -17,16 +16,16 @@ public class persona {
         System.out.println("Elige tu opción: \n 1. Crear usuario \n 2. Ingresar a Twitter \n 3. Ingresar a Instagram\nEs necesario crear un usuario para seguir con el programa");
         Scanner sc = new Scanner(System.in);
         ArrayList<String> cuenta = new ArrayList<>();
-        int opc = sc.nextInt();
-        if (opc ==1){
+        String opc = sc.nextLine();
+        if (opc.equals("1")){
             System.out.println("Ingresa tu usuario: ");
-                String usuario = sc.nextLine();
+            String usuario = sc.nextLine();
             System.out.println("Ingresa tu contraseña: ");
-                String contrasena = sc.nextLine();
+            String contrasena = sc.nextLine();
             persona persona = new persona(usuario, contrasena);
             cuenta.add(usuario);
             cuenta.add(contrasena);
-            System.out.println(cuenta);
+
         }
     }
 }
